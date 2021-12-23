@@ -12,13 +12,11 @@ public class Main {
 		// TODO Auto-generated method stub
 		int num = 70304;
 		System.out.println(expandedForm(num));
-		
-		
 	}
 	 public static String expandedForm(int num) {
 		 String solution = "";
 		 String inToString = num+"";
-		 //String numOfDigitLength = "";
+		 
 		 for(int i=0; i<inToString.length(); ++i) {
 			 
 			 if(!inToString.substring(i, i+1).equals("0")) {
@@ -30,7 +28,7 @@ public class Main {
 			 }
 		 }
 		 solution.stripTrailing();
-		 var sb = new StringBuffer(solution);
+		 var sb = new StringBuffer(solution);//remove the last "+"
 		 sb.deleteCharAt(solution.length()-1);
 		 return sb.toString();
 	 }
